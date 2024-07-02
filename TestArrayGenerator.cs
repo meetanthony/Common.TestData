@@ -1,4 +1,6 @@
-﻿namespace Common.TestData;
+﻿using System;
+
+namespace Common.TestData;
 
 public static class TestArrayGenerator
 {
@@ -43,6 +45,7 @@ public static class TestArrayGenerator
         var rotatedNums = RotateArray(nums, rotateTimes);
         return rotatedNums;
     }
+
     public static int[] GetDescendingRotatedArray(int itemsCount, int minValue, int rotateTimes)
     {
         var nums = GetDescendingArray(itemsCount, minValue);
@@ -51,8 +54,8 @@ public static class TestArrayGenerator
     }
 
     public static int[] GetRandomArray(int itemsCount = 10000,
-        int elementsMinValue = Int32.MinValue,
-        int elementsMaxValue = Int32.MaxValue, bool exceptZeros = false)
+        int elementsMinValue = int.MinValue,
+        int elementsMaxValue = int.MaxValue, bool exceptZeros = false)
     {
         var testArray = new int[itemsCount];
         for (int i = 0; i < testArray.Length; i++)
